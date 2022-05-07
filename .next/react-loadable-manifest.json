@@ -1,1 +1,8 @@
-{}
+{
+  "index.js -> ../components/basicTable": {
+    "id": "index.js -> ../components/basicTable",
+    "files": [
+      "static/chunks/components_basicTable_js.js"
+    ]
+  }
+}
