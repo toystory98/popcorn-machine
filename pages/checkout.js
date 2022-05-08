@@ -46,17 +46,17 @@ export default function CheckOut(props) {
                 >
                     <Grid item>
                         <Link href="/qrPage">
-                            <Button onClick={() => { console.log('onClick'); }} variant="contained" style={{ backgroundColor: '#4B6587', height: '80px', width: '100vh'}}> พร้อมเพย์ </Button>
+                            <Button onClick={() => { console.log('onClick'); }} variant="contained" style={{ backgroundColor: '#4B6587', height: '80px', width: '250px'}}> พร้อมเพย์ </Button>
                         </Link>
                     </Grid>
                     <Grid item>
                         <Link href="/qrPage">
-                            <Button onClick={() => { console.log('onClick'); }} variant="contained" style={{ backgroundColor: '#4B6587', height: '80px', width: '100vh'}}> wallet </Button>
+                            <Button onClick={() => { console.log('onClick'); }} variant="contained" style={{ backgroundColor: '#4B6587', height: '80px', width: '250px'}}> wallet </Button>
                         </Link>
                     </Grid>
                     <Grid item>
                         <Link href="/qrPage">
-                            <Button onClick={() => { console.log('onClick'); }} variant="contained" style={{ backgroundColor: '#4B6587', height: '80px', width: '100vh'}}> เดบิต/เครดิต การ์ด </Button>
+                            <Button onClick={() => { console.log('onClick'); }} variant="contained" style={{ backgroundColor: '#4B6587', height: '80px', width: '250px'}}> เดบิต/เครดิต การ์ด </Button>
                         </Link>
                     </Grid>
                 </Grid>
