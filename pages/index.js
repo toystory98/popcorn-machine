@@ -82,7 +82,7 @@ export default function Home(props) {
                                 sx= {{marginLeft:'20px', height: '100%'}}
                             >
                                 {Array.from(Array(6)).map((_, index) => (
-                                    <Card sx={{ minWidth: 200 }}>
+                                    <Card sx={{ minWidth: 200 }} key={index}>
                                         <div style={{ display: 'flex', justifyContent: 'center' }}>
                                             <CardMedia
                                                 component="img"
@@ -106,7 +106,7 @@ export default function Home(props) {
                                 sx= {{marginLeft:'20px', height: '100%'}}
                             >
                                 {Array.from(Array(6)).map((_, index) => (
-                                    <Card sx={{ minWidth: 200 }}>
+                                    <Card sx={{ minWidth: 200 }} key={index}>
                                         <div style={{ display: 'flex', justifyContent: 'center' }}>
                                             <CardMedia
                                                 component="img"
@@ -130,7 +130,7 @@ export default function Home(props) {
                                 sx= {{marginLeft:'20px', height: '100%'}}
                             >
                                 {Array.from(Array(6)).map((_, index) => (
-                                    <Card sx={{ minWidth: 200 }}>
+                                    <Card sx={{ minWidth: 200 }} key={index}>
                                         <div style={{ display: 'flex', justifyContent: 'center' }}>
                                             <CardMedia
                                                 component="img"
@@ -149,6 +149,7 @@ export default function Home(props) {
                 </Container>
             </TabPanel>
           </Container>
+          <Toolbar/>
           <Toolbar/>
           <AppBar position="fixed" color="primary" sx={{ top: 'auto', bottom: 0 }}>
             <Toolbar sx={{ backgroundColor: '#F7F6F2' }}>
