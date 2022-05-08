@@ -29,7 +29,7 @@ export default function QrScan(props) {
                 <CssBaseline />
                 <ElevationScroll {...props}>
                     <AppBar>
-                        <Toolbar sx={{ justifyContent: 'center' }}>
+                        <Toolbar sx={{ justifyContent: 'center', backgroundColor: "#D9534F"}}>
                             <Typography variant="h6" component="div">
                                 แสกนเพื่อจ่าย
                             </Typography>

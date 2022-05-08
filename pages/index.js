@@ -1,5 +1,5 @@
 import { TabContext, TabList, TabPanel } from '@mui/lab';
-import { AppBar, Box, Button, Card, CardActions, CardMedia, Container, CssBaseline, Grid, Modal, Tab, Toolbar, Typography, useScrollTrigger } from '@mui/material';
+import { AppBar, Box, Button, Card, CardActions, CardMedia, Container, CssBaseline, Grid, Modal, Tab, Toolbar, Typography, useScrollTrigger, Stack } from '@mui/material';
 import dynamic from 'next/dynamic';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
@@ -42,13 +42,13 @@ export default function Home(props) {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   return (
-    <Box sx={{ pb: 7 }}>
+    <Box sx={{ pb: 7, bgcolor:'#333C83' }}>
       <React.Fragment>
         <TabContext value="1">
           <CssBaseline />
           <ElevationScroll {...props}>
             <AppBar sx={{ backgroundColor: "#FAF3F3" }}>
-              <Toolbar sx={{ justifyContent: 'center', backgroundColor: "#1976d2" }}>
+              <Toolbar sx={{ justifyContent: 'center', backgroundColor: "#D9534F" }}>
                 <Typography variant="h6" component="div">
                   Banner
                 </Typography>
@@ -66,27 +66,90 @@ export default function Home(props) {
           <Toolbar />
           <Container>
             <TabPanel value="1">
-              <Grid container spacing={4} style={{ justifyContent: 'center' }}>
-                {Array.from(Array(12)).map((_, index) => (
-                  <Grid item key={index}>
-                    <Card sx={{ minWidth: 275 }}>
-                      <div style={{ display: 'flex', justifyContent: 'center' }}>
-                        <CardMedia
-                          component="img"
-                          sx={{ height: '200px', width: 'auto', padding: '10px' }}
-                          image='/popcorn.png'
-                        />
-                      </div>
-                      <CardActions sx={{ justifyContent: 'center' }}>
-                        <Button onClick={() => { setCount(count + 1); }} variant="contained" style={{ backgroundColor: '#5AA897' }}> 59 บาท </Button>
-                      </CardActions>
-                    </Card>
-                  </Grid>
-                ))}
-              </Grid>
+            <Container fixed>
+                    <Stack
+                        direction="column"
+                        justifyContent="flex-start"
+                        alignItems="center"
+                        sx={{height: '100vh'}}
+                    >
+                        <Box sx={{minHeight: '300px', width: '100%', overflow: 'scroll' }}>
+                            <Stack
+                                direction="row"
+                                justifyContent="flex-start"
+                                alignItems="center"
+                                spacing={2}
+                                sx= {{marginLeft:'20px', height: '100%'}}
+                            >
+                                {Array.from(Array(6)).map((_, index) => (
+                                    <Card sx={{ minWidth: 200 }}>
+                                        <div style={{ display: 'flex', justifyContent: 'center' }}>
+                                            <CardMedia
+                                                component="img"
+                                                sx={{ height: '200px', width: 'auto', padding: '10px' }}
+                                                image='/popcorn.png'
+                                            />
+                                        </div>
+                                        <CardActions sx={{ justifyContent: 'center' }}>
+                                            <Button onClick={() => { setCount(count + 1); }} variant="contained" style={{ backgroundColor: '#5AA897' }}> 59 บาท </Button>
+                                        </CardActions>
+                                    </Card>
+                                ))}
+                            </Stack>
+                        </Box>
+                        <Box sx={{minHeight: '300px', width: '100%', overflow: 'scroll' }}>
+                            <Stack
+                                direction="row"
+                                justifyContent="flex-start"
+                                alignItems="center"
+                                spacing={2}
+                                sx= {{marginLeft:'20px', height: '100%'}}
+                            >
+                                {Array.from(Array(6)).map((_, index) => (
+                                    <Card sx={{ minWidth: 200 }}>
+                                        <div style={{ display: 'flex', justifyContent: 'center' }}>
+                                            <CardMedia
+                                                component="img"
+                                                sx={{ height: '200px', width: 'auto', padding: '10px' }}
+                                                image='/popcorn.png'
+                                            />
+                                        </div>
+                                        <CardActions sx={{ justifyContent: 'center' }}>
+                                            <Button onClick={() => { setCount(count + 1); }} variant="contained" style={{ backgroundColor: '#5AA897' }}> 59 บาท </Button>
+                                        </CardActions>
+                                    </Card>
+                                ))}
+                            </Stack>
+                        </Box>
+                        <Box sx={{minHeight: '300px', width: '100%', overflow: 'scroll' }}>
+                            <Stack
+                                direction="row"
+                                justifyContent="flex-start"
+                                alignItems="center"
+                                spacing={2}
+                                sx= {{marginLeft:'20px', height: '100%'}}
+                            >
+                                {Array.from(Array(6)).map((_, index) => (
+                                    <Card sx={{ minWidth: 200 }}>
+                                        <div style={{ display: 'flex', justifyContent: 'center' }}>
+                                            <CardMedia
+                                                component="img"
+                                                sx={{ height: '200px', width: 'auto', padding: '10px' }}
+                                                image='/popcorn.png'
+                                            />
+                                        </div>
+                                        <CardActions sx={{ justifyContent: 'center' }}>
+                                            <Button onClick={() => { setCount(count + 1); }} variant="contained" style={{ backgroundColor: '#5AA897' }}> 59 บาท </Button>
+                                        </CardActions>
+                                    </Card>
+                                ))}
+                            </Stack>
+                        </Box>
+                    </Stack>
+                </Container>
             </TabPanel>
-
           </Container>
+          <Toolbar/>
           <AppBar position="fixed" color="primary" sx={{ top: 'auto', bottom: 0 }}>
             <Toolbar sx={{ backgroundColor: '#F7F6F2' }}>
               <Grid container sx={{ justifyContent: 'center' }}>
